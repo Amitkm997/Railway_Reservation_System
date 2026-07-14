@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: rgb(98, 98, 99);
+            color: rgb(153, 145, 224);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+        }
+
+        .logo h2 {
+            font-size: 28px;
+            box-shadow: 7px -2px 19px 5px black;
+            padding: 5px 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* dashBoard  */
+        .dashboard {
+            width: 80%;
+            max-width: 700px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .dashboard h1 {
+            text-align: center;
+            color: blue;
+            margin-bottom: 30px;
+        }
+
+        .profile {
+            margin-bottom: 20px;
+        }
+
+        .profile p {
+            font-size: 18px;
+            margin: 15px;
+        }
+
+        .profile span {
+            font-weight: bold;
+            color: brown
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .buttons button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+        }
+
+        .jobs-btn {
+            background: blue;
+
+        }
+
+        .application-btn {
+            background: blue;
+        }
+        
+        .logout-btn{
+            background: blue;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <h2>Placement Portal</h2>
+        </div>
+
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="register.html">Register</a>
+          <a href="my-application.html">My Application</a>
+        </div>
+    </div>
+
+    <!-- dashboard  -->
+    <div class="dashboard">
+        <h1>Student Dashboard</h1>
+        <div class="profile">
+            <p>Name: <span id="name"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <!-- <p>College: <span id="college"></span></p>s -->
+            <p>Branch: <span id="branch"></span></p>
+            <p>passout Year: <span id="year"></span></p>
+        </div>
+        <div class="buttons">
+            <button class="jobs-btn" onclick="window.location.href='jobs.html'">
+                View Jobs
+            </button>
+            <button class="application-btn" onclick="window.location.href='my-application.html'">
+                My application
+            </button>
+
+            <button class="logout-btn" id="logoutBtn">
+                Logout
+            </button>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Placement Portal. All Rights Reserved.</p>
+    </footer>
+
+    <script src="./Javascript/dashboard.js"></script>
+
+</body>
+
+</html>

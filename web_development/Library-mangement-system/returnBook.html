@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            background:blue;
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 40px;
+        }
+
+        .logo h2{
+            font-size:28px;
+        }
+
+        .nav-links{
+            display:flex;
+            gap:25px;
+        }
+
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+        }
+
+        .nav-links a:hover{
+            text-decoration:underline;
+        }
+
+        /* Form */
+
+        .container{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:80vh;
+        }
+
+        .form-box{
+            width:450px;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        .form-box h2{
+            text-align:center;
+            color:blue;
+            margin-bottom:20px;
+        }
+
+        .form-group{
+            margin-bottom:18px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:6px;
+            font-weight:bold;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            border:1px solid #ccc;
+            border-radius:5px;
+            font-size:16px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:green;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:darkgreen;
+        }
+
+        footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            <h2>LibraryMS</h2>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="addBooks.html">Add Books</a>
+            <a href="books.html">Books</a>
+            <a href="borrowBooks.html">Borrow</a>
+            <a href="returnBooks.html">Return</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+
+    </div>
+
+    <!-- Return Form -->
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h2>Return Book</h2>
+
+            <form id="returnForm">
+
+                <div class="form-group">
+                    <label>Book ID</label>
+                    <input
+                        type="text"
+                        id="bookId"
+                        placeholder="Enter Book ID"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Student Email</label>
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Enter Student Email"
+                        required
+                    >
+                </div>
+
+                <button type="submit">
+                    Return Book
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2026 Library Management System. All Rights Reserved.</p>
+    </footer>
+
+    <script src="javascript/returnBook.js"></script>
+
+</body>
+</html>

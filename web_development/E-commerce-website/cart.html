@@ -1,0 +1,352 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Page</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background-color:#f4f4f4;
+        }
+
+        /* Header */
+
+        .main_container{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 30px;
+            background-color:white;
+            box-shadow:0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo img{
+            height:60px;
+        }
+
+        .heading h1{
+            color:blue;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 30px;
+            background-color:black;
+        }
+
+        .links{
+            display:flex;
+            gap:25px;
+        }
+
+        .links a{
+            text-decoration:none;
+            color:white;
+            font-size:18px;
+        }
+
+        .links a:hover{
+            color:royalblue;
+        }
+
+        .nav-buttons button{
+            padding:8px 15px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            margin-left:10px;
+        }
+
+        .nav-buttons button a{
+            text-decoration:none;
+            color:black;
+        }
+
+        /* Cart Heading */
+
+        .cart-heading{
+            text-align:center;
+            margin:40px 0;
+        }
+
+        .cart-heading h1{
+            color:blue;
+            font-size:36px;
+        }
+
+        /* Cart Layout */
+
+        .cart-container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+            display:flex;
+            gap:30px;
+            flex-wrap:wrap;
+            margin-bottom:50px;
+        }
+
+        /* Cart Items */
+
+        .cart-items{
+            flex:2;
+            display:flex;
+            flex-direction:column;
+            gap:20px;
+        }
+
+        .cart-card{
+            background:white;
+            display:flex;
+            align-items:center;
+            gap:20px;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .cart-card img{
+            width:120px;
+            height:120px;
+            object-fit:cover;
+            border-radius:10px;
+        }
+
+        .item-details{
+            flex:1;
+        }
+
+        .item-details h3{
+            margin-bottom:10px;
+        }
+
+        .item-details p{
+            margin-bottom:10px;
+        }
+
+        .quantity{
+            width:70px;
+            padding:5px;
+        }
+
+        .remove-btn{
+            background:red;
+            color:white;
+            border:none;
+            padding:10px 15px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .remove-btn:hover{
+            background:darkred;
+        }
+
+        /* Summary */
+
+        .cart-summary{
+            flex:1;
+            min-width:300px;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            height:fit-content;
+        }
+
+        .cart-summary h2{
+            text-align:center;
+            color:blue;
+            margin-bottom:20px;
+        }
+
+        .summary-row{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:15px;
+        }
+
+        .checkout-btn{
+            width:100%;
+            padding:12px;
+            background:green;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:16px;
+            margin-top:15px;
+        }
+
+        .checkout-btn:hover{
+            background:darkgreen;
+        }
+
+        /* Footer */
+
+        footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+
+    <div class="main_container">
+
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+
+        <div class="heading">
+            <h1>E-Commerce Website</h1>
+        </div>
+
+    </div>
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-buttons">
+            <button><a href="form.html">Register</a></button>
+            <button><a href="login.html">Login</a></button>
+            <button><a href="cart.html">Cart</a></button>
+        </div>
+
+    </div>
+
+    <!-- Cart Heading -->
+
+    <div class="cart-heading">
+        <h1>Shopping Cart</h1>
+    </div>
+
+    <!-- Cart Section -->
+
+    <div class="cart-container">
+
+        <!-- Left Side -->
+
+        <div class="cart-items">
+
+            <div class="cart-card">
+
+                <img src="https://picsum.photos/200?random=1" alt="Laptop">
+
+                <div class="item-details">
+                    <h3>Laptop</h3>
+                    <p>Price: ₹50,000</p>
+
+                    <label>Quantity:</label>
+                    <input
+                        type="number"
+                        value="1"
+                        min="1"
+                        class="quantity"
+                        data-price="50000"
+                    >
+                </div>
+
+                <button class="remove-btn">
+                    Remove
+                </button>
+
+            </div>
+
+            <div class="cart-card">
+
+                <img src="https://picsum.photos/200?random=2" alt="Phone">
+
+                <div class="item-details">
+                    <h3>Smartphone</h3>
+                    <p>Price: ₹25,000</p>
+
+                    <label>Quantity:</label>
+                    <input
+                        type="number"
+                        value="1"
+                        min="1"
+                        class="quantity"
+                        data-price="25000"
+                    >
+                </div>
+
+                <button class="remove-btn">
+                    Remove
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Right Side -->
+
+        <div class="cart-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="subtotal">₹75,000</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Shipping</span>
+                <span id="shipping">₹500</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-row" style="margin-top:15px;">
+                <strong>Total</strong>
+                <strong id="total">₹75,500</strong>
+            </div>
+
+            <button class="checkout-btn">
+                Proceed To Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>
+            © 2026 E-Commerce Website. All Rights Reserved.
+        </p>
+    </footer>
+
+    <script src="javascript/cart.js"></script>
+
+</body>
+</html>
+```

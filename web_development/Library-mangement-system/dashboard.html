@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Dashboard</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial,sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            background:blue;
+            color:white;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 40px;
+        }
+
+        .logo h2{
+            font-size:28px;
+        }
+
+        .nav-links{
+            display:flex;
+            gap:25px;
+        }
+
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+        }
+
+        .nav-links a:hover{
+            text-decoration:underline;
+        }
+
+        /* Heading */
+
+        .heading{
+            text-align:center;
+            margin:30px 0;
+        }
+
+        .heading h1{
+            color:blue;
+            font-size:36px;
+        }
+
+        /* Dashboard Cards */
+
+        .dashboard{
+            width:90%;
+            margin:30px auto;
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 0 10px gray;
+        }
+
+        .card h2{
+            margin-bottom:15px;
+            color:black;
+        }
+
+        .card p{
+            font-size:32px;
+            font-weight:bold;
+            color:blue;
+        }
+
+        /* Table */
+
+        .table-container{
+            width:90%;
+            margin:40px auto;
+        }
+
+        .table-container h2{
+            text-align:center;
+            margin-bottom:20px;
+            color:blue;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+            box-shadow:0 0 10px gray;
+        }
+
+        table th,
+        table td{
+            border:1px solid black;
+            padding:12px;
+            text-align:center;
+        }
+
+        table th{
+            background:#555;
+            color:white;
+        }
+
+        tr:nth-child(even){
+            background:#f1f1f1;
+        }
+
+        /* Footer */
+
+        footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+
+        <div class="logo">
+            <h2>LibraryMS</h2>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="addBooks.html">Add Books</a>
+            <a href="books.html">Books</a>
+            <a href="borrowBooks.html">Borrow</a>
+            <a href="returnBook.html">Return</a>
+            <a href="dashboard.html">Dashboard</a>
+        </div>
+
+    </div>
+
+    <!-- Heading -->
+
+    <div class="heading">
+        <h1>Library Dashboard</h1>
+    </div>
+
+    <!-- Dashboard Cards -->
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h2>Total Books</h2>
+            <p id="totalBooks">0</p>
+        </div>
+
+        <div class="card">
+            <h2>Available Books</h2>
+            <p id="availableBooks">0</p>
+        </div>
+
+        <div class="card">
+            <h2>Borrowed Books</h2>
+            <p id="borrowBooks">0</p>
+        </div>
+
+        <div class="card">
+            <h2>Total Borrow Records</h2>
+            <p id="borrowRecords">0</p>
+        </div>
+
+    </div>
+
+    <!-- Borrow Records -->
+
+    <div class="table-container">
+
+        <h2>Recent Borrow Records</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Book ID</th>
+                    <th>Book Title</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Borrow Date</th>
+                    <th>Status</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="recordTable">
+
+                <!-- JavaScript will display records here -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>© 2026 Library Management System. All Rights Reserved.</p>
+    </footer>
+
+    <script src="javascript/dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        /* Header Section */
+
+        .main_container{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:10px 30px;
+            background-color:#f5f5f5;
+        }
+
+        .logo img{
+            height:60px;
+            width:auto;
+        }
+
+        .heading h1{
+            color:blue;
+        }
+
+        /* Navbar */
+
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:15px 30px;
+            background-color:black;
+        }
+
+        .links{
+            display:flex;
+            gap:25px;
+        }
+
+        .links a{
+            text-decoration:none;
+            color:white;
+            font-size:18px;
+        }
+
+        .links a:hover{
+            color:rgb(17, 51, 222);
+        }
+
+        .navbar button{
+            padding:8px 15px;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            margin-left:10px;
+        }
+
+        /* Banner */
+
+        .banner{
+            width:100%;
+            height:400px;
+            object-fit:cover;
+        }
+
+        /* Product Section */
+        .box img{
+            width:200px;
+            height:200px;
+            object-fit:cover;
+            border-radius:10px;
+            /* margin-left: 30px; */
+        }
+
+        .container{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:20px;
+            padding:30px;
+        }
+
+        .box{
+            width:250px;
+            height:300px;
+            border:1px solid #ddd;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            background-color:white;
+            text-align: center;
+        }
+
+        .box:hover{
+            transform:scale(1.03);
+            transition:0.3s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+
+    <div class="main_container">
+
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+        </div>
+
+        <div class="heading">
+            <h1>E-Commerce Website</h1>
+        </div>
+
+    </div>
+
+    <!-- Navbar -->
+
+    <div class="navbar">
+
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="About.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div>
+            <button><a href="form.html">Register</a></button>
+            <button><a href="login.html">Login</a></button>
+            <button><a href="cart.html">Cart</a></button>
+        </div>
+
+    </div>
+
+    <!-- Banner -->
+
+    <img src="OIP.webp" alt="Banner" class="banner">
+
+    <!-- Products -->
+
+    <!-- Products -->
+
+<div class="container">
+
+    <div class="box">
+        <img src="https://picsum.photos/200?random=1" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Price: $100</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="box">
+        <img src="https://picsum.photos/200?random=2" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Price: $200</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="box">
+        <img src="https://picsum.photos/200?random=3" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>Price: $300</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="box">
+        <img src="https://picsum.photos/200?random=4" alt="Product 4">
+        <h3>Product 4</h3>
+        <p>Price: $400</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="box">
+        <img src="https://picsum.photos/200?random=5" alt="Product 5">
+        <h3>Product 5</h3>
+        <p>Price: $500</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="box">
+        <img src="https://picsum.photos/200?random=6" alt="Product 6">
+        <h3>Product 6</h3>
+        <p>Price: $600</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="box">
+        <img src="https://picsum.photos/200?random=7" alt="Product 7">
+        <h3>Product 7</h3>
+        <p>Price: $700</p>
+        <button>Add to Cart</button>
+    </div>
+
+    <div class="box">
+        <img src="https://picsum.photos/200?random=8" alt="Product 8">
+        <h3>Product 8</h3>
+        <p>Price: $800</p>
+        <button>Add to Cart</button>
+    </div>
+
+</div>
+
+</body>
+</html>

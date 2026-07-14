@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        /* Navbar  */
+        .navbar{
+            background-color: rgb(98, 98, 99);
+            color: rgb(153, 145, 224);
+            display: flex;
+            padding: 15px 50px;
+            justify-content: space-between;
+            align-items: center;
+           
+        }
+
+        .logo h2{
+            font-size: 28px;
+            box-shadow: 7px -2px 19px 5px black;
+        }
+
+        .nav-links{
+            display: flex;
+            gap:25px
+        }
+         
+        .nav-links a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Hero Section  */
+        .hero{
+            height: 70vh;
+            /* background-color: rgb(187, 187, 225); */
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKTS3poNaQRrBIQUFh5f-IfBIsMuGX5UJjxQ&s");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            flex-direction: column;
+           
+        }
+
+        .hero h1{
+            /* margin-top: 20px; */
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .hero p{
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .companies{
+            padding: 50px;
+            text-align: center;
+        }
+        .companies h2{
+            margin-bottom: 30px;
+            color: blue;
+        }
+
+        .company-container{
+            display: flex;
+            gap:20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .company-card{
+            background-color: white;
+            box-shadow: 0 0 10px gray;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            margin: 20px;
+        }
+        .company-card h3{
+            margin-bottom: 10px;
+        }
+
+        .company-card p{
+            color: gray;
+        }
+        .hero-card{
+            margin-top: 20px; 
+            align-items: center;
+        }
+         
+        .student{
+            padding: 50px;
+            text-align: center;
+        }
+
+        .student h2{
+            margin-bottom: 30px;
+            color: blue;
+        }
+
+        .student-container{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .student-card{
+            background-color: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .student-card img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar  -->
+     <div class="navbar">
+          <div class="logo">
+            <h2>Placement Portal</h2>
+          </div>
+          <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="Register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="my-application.html">My Application</a>
+            <a href="profile.html">My Profile</a>
+          </div>
+     </div>
+
+     <!-- hero Section  -->
+      <section class="hero">
+           <div class="hero-card">
+            <h1>Get Dream Job</h1>
+            <p>Connect with top companies and start your career journey today.</p>
+            <button>Explore Jobs</button>
+           </div>
+            
+      </section>
+
+      <!-- Top Hiring Comapanies  -->
+       <section class="companies">
+            <h2>Top Hiring Comapanies</h2>
+            <div class="company-container">
+                <div class="company-card">
+                    <h3>Google</h3>
+                    <p>Software Engineer</p>
+                    <p>Package:18 LPA</p>
+                </div>
+                <div class="company-card">
+                    <h3>Amazon</h3>
+                    <p>Coporate Trainer</p>
+                    <p>Package:20 LPA</p>
+                </div>
+                <div class="company-card">
+                    <h3>Tata</h3>
+                    <p>Developer</p>
+                    <p>Package:30 LPA</p>
+                </div>
+            </div>
+       </section>
+
+       <!-- Recently Placed Students  -->
+        <section class="student">
+            <h2>Recently Placed Students</h2>
+            <div class="student-container">
+                <div class="student-card">
+                   <img src="../logo.jpg" alt="logo">
+                   <h3>Sakshi</h3>
+                   <p>Placed at Google</p>
+                </div>
+                <div class="student-card">
+                   <img src="../logo.jpg" alt="logo">
+                   <h3>Bhawna</h3>
+                   <p>Placed at TATA</p>
+                </div>
+                <div class="student-card">
+                   <img src="../logo.jpg" alt="logo">
+                   <h3>Sheetal</h3>
+                   <p>Placed at Amazon</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>@ 2026 Placement Portal. All Right Rreserved</p>
+        </footer>
+</body>
+</html>

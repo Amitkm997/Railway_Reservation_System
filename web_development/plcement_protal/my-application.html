@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        /* Navbar  */
+        .navbar{
+            background-color: rgb(98, 98, 99);
+            color: rgb(153, 145, 224);
+            display: flex;
+            padding: 15px 50px;
+            justify-content: space-between;
+            align-items: center;
+           
+        }
+
+        .logo h2{
+            font-size: 28px;
+            box-shadow: 7px -2px 19px 5px black;
+        }
+
+        .nav-links{
+            display: flex;
+            gap:25px
+        }
+         
+        .nav-links a{
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+       .heading{
+        text-align: center;
+        margin: 40px 0;
+       }
+
+       .heading h2{
+        color: blue;
+       }
+
+       .application-container{
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+        gap:20px;
+        margin-bottom: 50px;
+       }
+
+       .application-card{
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px gray;
+       }
+
+        .application-card h2{
+            color: brown;
+            margin-bottom: 15px;
+        }
+
+        .application-card p{
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .status{
+            color: green;
+            font-weight: bold;
+        }
+
+        footer{
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navbar  -->
+     <div class="navbar">
+          <div class="logo">
+            <h2>Placement Portal</h2>
+          </div>
+          <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="Register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="">Admin</a>
+          </div>
+     </div>
+
+     <!-- Headint -->
+      <div class="heading">
+        <h1>My Application</h1>
+      </div>
+      
+      <!-- Applications  -->
+
+      <div class="application-container" id="applicationContainer">
+          <!-- Applications will be displayed here using js  -->
+      </div>
+
+        <footer>
+            <p>@ 2026 Placement Portal. All Right Rreserved</p>
+        </footer>
+
+        <script src="myApplication.js"></script>
+</body>
+</html>

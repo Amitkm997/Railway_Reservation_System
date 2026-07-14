@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar  */
+        .navbar {
+            background-color: rgb(98, 98, 99);
+            color: rgb(153, 145, 224);
+            display: flex;
+            padding: 15px 50px;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .logo h2 {
+            font-size: 28px;
+            box-shadow: 7px -2px 19px 5px black;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Profile  */
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 85vh;
+        }
+
+
+
+        .profile-box{
+            background: white;
+            width: 500px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        .profile-box h2{
+            text-align: center;
+            color: blue;
+            margin-bottom: 25px;
+        }
+
+        .form-group{
+            margin-bottom: 18px;
+
+        }
+
+        label{
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input , select{
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+
+        }
+
+        input:focus, select:focus{
+            outline: none;
+            border-color: blueviolet;
+        }
+
+        button{
+            width: 100%;
+            padding: 12px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar  -->
+    <div class="navbar">
+        <div class="logo">
+            <h2>Placement Portal</h2>
+        </div>
+        <div class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="jobs.html">Jobs</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="Register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="my-application.html">My Application</a>
+        </div>
+    </div>
+
+    <!-- profile  -->
+    <div class="container">
+        <div class="profile-box">
+            <h2>My Profile</h2>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" id="name">
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="email" readonly>
+                </div>
+                <div class="form-group">
+                    <label>Branch</label>
+                    <select id="branch">
+                        <option value="">CSE</option>
+                        <option value="">IT</option>
+                        <option value="">ECE</option>
+                        <option value="">EEE</option>
+                        <option value="">Civil</option>
+                        <option value="">Mechanical</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+                    <label for="">Passout year</label>
+                    <input type="number" id="year">
+                </div>
+
+                <button type="submit">
+                    Update Profile
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+
+    <footer>
+        <p>@ 2026 Placement Portal. All Right Rreserved</p>
+    </footer>
+
+    <script src="./Javascript/profile.js"></script>
+</body>
+
+</html>
