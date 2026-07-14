@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.swing.text.StyledEditorKit;
+
 public class Main {
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
@@ -14,10 +16,13 @@ public class Main {
             System.out.println("\n==============================================");
             System.out.println("1. View All Trains");
             System.out.println("2. Search Train");
-            System.out.println("3. Book Ticket");
-            System.out.println("4. Search Ticket");
-            System.out.println("5. Cancel Ticket");
-            System.out.println("6. Exit");
+            System.out.println("3. Search Train by source and destination");
+            System.out.println("4. Book Ticket");
+            System.out.println("5. Search Ticket");
+            System.out.println("6. Cancel Ticket");
+            System.out.println("7. View All Tickets");
+            System.out.println("8. Booking Statistics");
+            System.out.println("9. Exit");
 
             choice=sc.nextInt();
 
@@ -39,26 +44,44 @@ public class Main {
                     }
                     
                     break;
-
                 case 3:
+                    sc.nextLine();
+
+                    System.out.println("Enter Source: ");
+                    String source=sc.nextLine();
+
+                    System.out.println("Enter Destination: ");
+                    String destination=sc.nextLine();
+
+                    railwaySystem.searchTrainBySourceDestination(source,destination);
+                    break;
+                case 4:
                     railwaySystem.bookTicket();
                     break;
 
-                case 4:
+                case 5:
                     System.out.print("Enter Ticket ID");
                     int ticketId=sc.nextInt();
 
                     railwaySystem.searchTicket(ticketId);
                     break;
                 
-                case 5:
+                case 6:
                     System.out.println("Enter Ticket ID");
                     int cancelTicketId=sc.nextInt();
 
                     railwaySystem.cancelTicket(cancelTicketId);
                     break;
+
+                case 7:
+                    railwaySystem.displayAllTickets();
+                    break;
+
+                case 8:
+                    railwaySystem.bookingStatics();
+                    break;
                 
-                case 6:
+                case 9:
                     System.out.println("\nThank you for using railway reservation system.");
                 default:
                     break;

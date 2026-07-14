@@ -154,7 +154,7 @@ public void bookTicket() {
         // Remove cancelled ticket
         tickets.remove(ticketId);
     
-        System.out.println("----------------------------------------------");
+        System.out.println("-------------------------------------------web_development---");
         System.out.println("Ticket Cancelled Successfully!");
         System.out.println("Ticket ID : " + ticketId);
         System.out.println("----------------------------------------------");
@@ -184,5 +184,46 @@ public void bookTicket() {
             nextTicketId++;
         }
     
+    }
+
+   //search train by source and destination
+    public void searchTrainBySourceDestination(String source,String destination){
+        boolean found=false;
+
+        for(Train train:trains){
+            if(train.getSource().equalsIgnoreCase(source) && train.getDestination().equalsIgnoreCase(destination)){
+              train.displayTrain();
+              found=true;
+            }
+        }
+        if(!found){
+            System.out.println("No Trains found");
+        }
+    }
+
+    public void displayAllTickets(){
+        if(tickets.isEmpty()){
+            System.out.println("No Tickets Found");
+            return;
+        }
+        
+        for(Ticket ticket:tickets.values()){
+            ticket.displayTicket();
+        }
+
+    }
+
+    public void bookingStatics(){
+        System.out.println("\n========BOOKING STATISTICS==========");
+        for(Train train:trains){
+            int bookedSeats=train.getTotalSeats()-train.getAvailableSeats();
+            System.out.println("-----------------------------------");
+            System.out.println("Train Number           : "+train.getTrainNo());
+            System.out.println("Train Name             : "+train.getTrainName());
+            System.out.println("Total Seates           : "+train.getTotalSeats());
+            System.out.println("Booked Seats           : "+bookedSeats);
+            System.out.println("Available seats        : "+train.getAvailableSeats());
+            System.out.println("T----------------------------------");
+        }
     }
 }
