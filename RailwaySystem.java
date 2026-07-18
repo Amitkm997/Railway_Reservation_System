@@ -4,6 +4,12 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class RailwaySystem {
     // collection to store all trains
     private ArrayList<Train> trains;
@@ -224,6 +230,63 @@ public void bookTicket() {
             System.out.println("Booked Seats           : "+bookedSeats);
             System.out.println("Available seats        : "+train.getAvailableSeats());
             System.out.println("T----------------------------------");
+        }
+    }
+
+    //Save all tickets to file
+    public void saveTicketsToFile(){
+        try{
+          BufferedWriter writer=new BufferedWriter(new FileWriter("tickets.txt"));
+          if(tickets.isEmpty()){
+            writer.write("No tickets Booked");
+            writer.close();
+
+            System.out.println("No tickets Available");
+          }
+
+          for(Ticket ticket : tickets.values()){
+            writer.write("---------------------------");
+            writer.newLine();
+            
+            writer.write("Ticket ID : "+ ticket.getTicketId());
+            writer.newLine();
+
+            writer.write("Passenger : "+ ticket.getPassenger().getName());
+            writer.newLine();
+            
+            writer.write("Train : "+ ticket.getTrain().getTrainName());
+            writer.newLine();
+
+            writer.write("Seat Number : "+ ticket.getSeatNumber());
+            writer.newLine();
+
+            writer.write("Status : "+ ticket.getStatus());
+            writer.newLine();
+
+            writer.write("------------------------------------");
+            writer.newLine();
+            writer.newLine();
+
+          }
+          writer.close();
+          System.out.println("Tickets saved successfully");
+        }catch(IOException e){
+            System.out.println("Error : "+e.getMessage());
+        }
+    }
+
+    //Read all the tickets in the file
+    public void readAllTicketsFromFile(){
+        try{
+           BufferedReader reader=new BufferedReader(new FileReader("tickets.txt"));
+           String line;
+
+           while ((line=reader.readLine())!=null) {
+               System.out.println(line);
+           }
+           reader.close();
+        }catch(IOException e){
+            System.out.println(e.getMessage());
         }
     }
 }

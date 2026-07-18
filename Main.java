@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.swing.text.StyledEditorKit;
-
 public class Main {
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
@@ -22,7 +20,9 @@ public class Main {
             System.out.println("6. Cancel Ticket");
             System.out.println("7. View All Tickets");
             System.out.println("8. Booking Statistics");
-            System.out.println("9. Exit");
+            System.out.println("9. Save tickets to file");
+            System.out.println("10. Read tickets from the file");
+            System.out.println("11. Exit");
 
             choice=sc.nextInt();
 
@@ -82,6 +82,14 @@ public class Main {
                     break;
                 
                 case 9:
+                    railwaySystem.saveTicketsToFile();
+                    break;
+                
+                case 10:
+                    railwaySystem.readAllTicketsFromFile();
+                    break;
+
+                case 11:
                     System.out.println("\nThank you for using railway reservation system.");
                 default:
                     break;

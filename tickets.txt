@@ -1,0 +1,8 @@
+---------------------------
+Ticket ID : 1001
+Passenger : Amit
+Train : Rajdhani Epress
+Seat Number : 1
+Status : Confirmed
+------------------------------------
+
